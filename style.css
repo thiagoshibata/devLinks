@@ -1,0 +1,62 @@
+* {
+  /*resetando algumas configurações iniciais*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+}
+
+#container {
+  width: 360px;
+  border: 1px solid red;
+  margin: 56px auto 0px;
+}
+
+#profile {
+  text-align: center; /*centralizando a imagem do elemento filho, pois elementos inline aceitam que o elemento pai alinhe utilizando text-align center.*/
+  padding: 24px;
+}
+
+#profile img {
+  width: 122px; /*Geralmente só se define a largura*/
+  /*Em elementos inline, não consigo centralizar utilizando margin: auto.  */
+}
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+/*Links*/
+ul {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /*Espaçamento entre itens*/
+}
+ul li a {
+  display: flex;
+  align-items: center; /*centraliza o texto verticalmente*/
+  justify-content: center; /*centraliza o texto horizontalmente*/
+
+  padding: 16px 24px;
+
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  text-decoration: none;
+  font-weight: 500;
+}
