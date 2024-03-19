@@ -5,20 +5,27 @@
   box-sizing: border-box;
 }
 
+/*Definindo variáveis*/
+:root{
+  --text-color: white;
+}
+
 body {
   background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
 }
 
 body * {
   font-family: "Inter", sans-serif;
-  color: #ffffff;
+  color: var(--text-color);
 }
 
 #container {
   width: 360px;
   margin: 56px auto 0px;
+  padding: 0 24px;
 }
 
+/*-- Profile ---*/
 #profile {
   text-align: center; /*centralizando a imagem do elemento filho, pois elementos inline aceitam que o elemento pai alinhe utilizando text-align center.*/
   padding: 24px;
@@ -34,13 +41,15 @@ body * {
   margin-top: 8px;
 }
 
-/*Links*/
+/*--- Links ----*/
 ul {
   list-style: none;
 
   display: flex;
   flex-direction: column;
   gap: 16px; /*Espaçamento entre itens*/
+
+  padding: 24px 0;
 }
 ul li a {
   display: flex;
@@ -59,11 +68,42 @@ ul li a {
   text-decoration: none;
   font-weight: 500;
 
-  transition: background .5s;
+  transition: background 0.5s;
 }
 
-ul li a:hover { /*pseudo-selector */
+ul li a:hover {
+  /*pseudo-selector */
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 1);
+  border: 1px solid var(--text-color);
+}
+
+/* social links */
+#social-links {
+  display: flex;
+  justify-content: center;
+
+  padding: 24px 0;
+
+  font-size: 24px;
+}
+
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 50%;
+
+  transition: background 0.2s;
+}
+
+#social-links a:hover {
+  background: rgb(255, 255, 255, 0.2);
+}
+
+footer{
+  padding: 24px;
+  text-align: center;
+  font-size: 14px;
 
 }
