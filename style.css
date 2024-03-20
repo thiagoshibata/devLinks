@@ -8,7 +8,7 @@
 /*Definindo variáveis*/
 :root {
   --text-color: white;
-  --bg-mobile-url: url(./assets/bg-mobile.jpg);
+  --bg-url: url(./assets/bg-mobile.jpg);
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.1);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
@@ -18,7 +18,7 @@
 
 .light {
   --text-color: black;
-  --bg-mobile-url: url(./assets/bg-mobile-light.jpg);
+  --bg-url: url(./assets/bg-mobile-light.jpg);
   --stroke-color: rgba(0, 0, 0, 0.5);
   --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.2);
@@ -27,7 +27,8 @@
 }
 
 body {
-  background: var(--bg-mobile-url) no-repeat top center/cover;
+  background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -56,7 +57,6 @@ body * {
   font-weight: 500;
   line-height: 24px;
   margin-top: 8px;
-
 }
 
 /*--- Switch ---*/
@@ -70,7 +70,7 @@ body * {
 #switch button {
   width: 32px;
   height: 32px;
-  border:0;
+  border: 0;
   background: white var(--switch-bg-url) no-repeat center;
   border-radius: 50%;
 
@@ -80,12 +80,10 @@ body * {
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
-
 }
-.light #switch button{
+.light #switch button {
   right: 0;
   left: initial;
-  
 }
 #switch span {
   display: block; /* para que o elemento inline aceite uma largura */
@@ -95,9 +93,6 @@ body * {
   border: 1px solid var(--stroke-color);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 9999px;
-
-
-
 }
 
 /*--- Links ----*/
@@ -164,4 +159,15 @@ footer {
   padding: 24px;
   text-align: center;
   font-size: 14px;
+}
+
+/* media queries */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url("./assets/bg-desktop.jpg");
+  }
+
+  .light {
+    --bg-url: url("./assets/bg-desktop-light.jpg");
+  }
 }
